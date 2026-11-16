@@ -1,0 +1,1 @@
+DIR* safe_opendir(char* file_name);
