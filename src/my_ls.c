@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <dirent.h>
+#include <stdlib.h>
+
 #include "my_ls.h"
 #include "utils.h"
 #include "get_files.h"
