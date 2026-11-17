@@ -1,5 +1,5 @@
 TARGET = my_ls
-OBJ = src/my_ls.c src/utils.c
+OBJ = src/main.c src/my_ls.c src/utils.c src/get_files.c
 CFLAGS = -Wall -Wextra -Werror
 
  all : $(TARGET)
