@@ -4,6 +4,15 @@
 
 #include "utils.h"
 
+//memcpy, strlen, strcat, strcpy, strcmp
+int my_strlen(char* string){
+    char* pointer = string;
+    while(*pointer != 0){
+        pointer++;
+    }
+    return pointer-string;
+}
+
 DIR* safe_opendir(char* file_name){
     DIR* dir = opendir(file_name);
     if (dir == NULL) {
