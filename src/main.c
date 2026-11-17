@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #include "my_ls.h"
 #include "get_files.h"
 
