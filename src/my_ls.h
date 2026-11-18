@@ -1,1 +1,1 @@
-void ls(char* filename,int dot,int sort_by_modified);
+void simple_ls(char* filename,int dot,int sort_by_modified);

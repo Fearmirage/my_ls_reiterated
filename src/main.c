@@ -45,7 +45,7 @@ int main(int argc,char** argv){
         if (path_count > 1){
             printf("%s:\n", file_name);
         }
-        ls(file_name, dot, sort_by_modified);
+        simple_ls(file_name, dot, sort_by_modified);
 
         if(i != path_count - 1){
             printf("\n");
@@ -53,7 +53,7 @@ int main(int argc,char** argv){
     }
 
     if (!did_ls_at_least_once){
-        ls("./",dot,sort_by_modified);
+        simple_ls("./",dot,sort_by_modified);
     }
     return 0;
 }

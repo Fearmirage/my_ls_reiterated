@@ -6,7 +6,7 @@
 #include "utils.h"
 #include "get_files.h"
 
-void ls(char* dirname,int dot,int sort_by_modified){
+void simple_ls(char* dirname,int dot,int sort_by_modified){
     // ** // Getting contents
     int len = get_num_of_files(dirname,dot);
     struct dirent** all_files = get_all_files(dirname,len,dot);
