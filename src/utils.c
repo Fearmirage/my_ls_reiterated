@@ -4,7 +4,6 @@
 
 #include "utils.h"
 
-//memcpy, strlen, strcat, strcmp
 int my_strlen(char* string){
     char* pointer = string;
     while(*pointer != 0){
