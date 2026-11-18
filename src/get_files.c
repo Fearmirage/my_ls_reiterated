@@ -43,9 +43,8 @@ struct dirent** get_all_files(char* filename, int len,int dot){
 struct timespec get_when_last_modified(struct dirent* file1,char* parent_file){
     size_t size = my_strlen(parent_file) + 1 + my_strlen(file1->d_name) + 1;
     char* path = malloc(size);
-    strcpy(path,parent_file);
-    strcat(path,"/");
-    strcat(path, file1->d_name);
+    path[0] = '\0';
+    my_strcat(path, parent_file); my_strcat(path, "/"); my_strcat(path, file1->d_name);
     struct stat buffer;
     int status = stat(path,&buffer);
     if (status == -1){
