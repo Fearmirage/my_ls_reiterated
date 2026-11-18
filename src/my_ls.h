@@ -1,1 +1,2 @@
 void simple_ls(char* filename,int dot,int sort_by_modified);
+int list(int argc,char** argv);
