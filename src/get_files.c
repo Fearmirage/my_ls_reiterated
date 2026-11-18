@@ -8,8 +8,8 @@
 #include "get_files.h"
 #include "utils.h"
 
-int get_num_of_files(char* filename,int dot){
-    DIR* dir = safe_opendir(filename);
+int get_num_of_files(char* dirname,int dot){
+    DIR* dir = safe_opendir(dirname);
     int len = 0;
     struct dirent* file = readdir(dir);
     while(file != NULL){
@@ -22,9 +22,9 @@ int get_num_of_files(char* filename,int dot){
     return len;
 }
 
-struct dirent** get_all_files(char* filename, int len,int dot){
+struct dirent** get_all_files(char* dirname, int len,int dot){
     //get the amount of files
-    DIR* dir = safe_opendir(filename);
+    DIR* dir = safe_opendir(dirname);
     struct dirent** all_files = malloc(len*sizeof(struct dirent*));
     struct dirent* file = readdir(dir);
     int i = 0;

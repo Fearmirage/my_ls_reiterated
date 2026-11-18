@@ -30,10 +30,10 @@ char* my_strcat(char* dst, char* src){
     return dst;
 }
 
-DIR* safe_opendir(char* file_name){
-    DIR* dir = opendir(file_name);
+DIR* safe_opendir(char* dirname){
+    DIR* dir = opendir(dirname);
     if (dir == NULL) {
-        printf("Cannot open directory '%s'\n", file_name);
+        printf("Cannot open directory '%s'\n", dirname);
         exit(1);
     }
     return dir;
