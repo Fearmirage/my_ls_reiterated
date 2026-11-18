@@ -30,8 +30,7 @@ struct dirent** get_all_files(char* filename, int len,int dot){
     int i = 0;
     while(file != NULL){
         if ( dot ||  *file->d_name != '.' ){
-            all_files[i] = malloc(sizeof(struct dirent));
-            memcpy(all_files[i], file, sizeof(struct dirent));
+            all_files[i] = file;
             i++;
         }
         file = readdir(dir);

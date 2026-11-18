@@ -18,8 +18,5 @@ void ls(char* filename,int dot,int sort_by_modified){
     }
 
     // ** // Freeing memory
-    for (int i = 0; i < len; i++) {
-        free(all_files[i]);
-    }
     free(all_files);
 }
