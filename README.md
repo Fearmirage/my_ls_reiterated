@@ -11,7 +11,7 @@ Synopsis : my_ls [-at] [file ...]
 The imposed functions made it clear what direction to go and comparing my_ls to ls allowed to refine the more subtle aspects
 
 ## Installation
-Use Makefile to compile my_ls.c with the command 'make'.
+Use Makefile to compile my_ls's files with the command 'make'.
 
 ## Usage
 Execute the compiled file the same way you'd execute the ls command.
