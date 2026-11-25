@@ -61,7 +61,7 @@ void sort_paths(char** paths,size_t path_count){
     for(size_t i = 0; i<path_count; i++) {
         key = paths[i]; //take value
         j = i;
-        while(j > 0 && strcmp(paths[j-1], key) > 0) {
+        while(j > 0 && my_strcmp(paths[j-1], key) > 0) {
             paths[j] = paths[j-1];
             j--;
         }
@@ -92,7 +92,7 @@ struct dirent** sort_files(struct dirent** files,int len,char* parent_file,int s
                 j--;
             }
         }else{
-            while(j > 0 && strcmp(files[j-1]->d_name, key->d_name) > 0) {
+            while(j > 0 && my_strcmp(files[j-1]->d_name, key->d_name) > 0) {
                 files[j] = files[j-1];
                 j--;
             }

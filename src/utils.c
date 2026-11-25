@@ -30,6 +30,23 @@ char* my_strcat(char* dst, char* src){
     return dst;
 }
 
+int my_strcmp(char* string1, char* string2){
+    char* pointer1 = string1;
+    char* pointer2 = string2;
+    while (*pointer1 != '\0'){
+        if (*pointer2 == '\0'){
+            return -1;
+        };
+        pointer1++;
+        pointer2++;
+    };
+    if (*pointer2 == '\0'){
+        return 0;
+    }else{
+        return 1;
+    }
+}
+
 DIR* safe_opendir(char* dirname){
     DIR* dir = opendir(dirname);
     if (dir == NULL) {
