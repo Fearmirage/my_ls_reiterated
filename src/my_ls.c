@@ -38,7 +38,7 @@ int* get_options(int argc, char** argv){
                     option_values[0] = 1;
                 }else if(*argv[i] == 't'){
                     option_values[1] = 1;
-                }else if(i == 1){
+                }else{
                     printf("Error : option that isn't supported was specified\n");
                     option_values[0] = -1;
                     return option_values;
