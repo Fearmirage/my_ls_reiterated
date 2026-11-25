@@ -26,6 +26,10 @@ int get_num_of_files(char* dirname,int dot){
 struct dirent** get_all_files(char* dirname, int len,int dot){
     //get the amount of files
     DIR* dir = safe_opendir(dirname);
+    if(dir == NULL){
+        printf("my_ls: %s: Error opening directory\n",dirname);
+        return NULL;
+    }
     struct dirent** all_files = malloc(len*sizeof(struct dirent*));
     struct dirent* file = readdir(dir);
     int i = 0;

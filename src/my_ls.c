@@ -12,6 +12,9 @@ int simple_ls(char* dirname,int dot,int sort_by_modified){
         return 1;
     }
     struct dirent** all_files = get_all_files(dirname,len,dot);
+    if(all_files == NULL){
+        return 1;
+    }
     all_files = sort_files(all_files,len,dirname,sort_by_modified);
 
     // ** // Printing contents
