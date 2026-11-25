@@ -2,8 +2,6 @@
 #include <dirent.h>
 #include <stdlib.h>
 #include <sys/stat.h>
-#include <string.h>
-#include <time.h>
 
 #include "get_files.h"
 #include "utils.h"
