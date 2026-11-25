@@ -5,9 +5,12 @@
 #include "my_ls.h"
 #include "get_files.h"
 
-void simple_ls(char* dirname,int dot,int sort_by_modified){
+int simple_ls(char* dirname,int dot,int sort_by_modified){
     // ** // Getting contents
     int len = get_num_of_files(dirname,dot);
+    if(len == -1){
+        return 1;
+    }
     struct dirent** all_files = get_all_files(dirname,len,dot);
     all_files = sort_files(all_files,len,dirname,sort_by_modified);
 
@@ -18,6 +21,7 @@ void simple_ls(char* dirname,int dot,int sort_by_modified){
 
     // ** // Freeing memory
     free(all_files);
+    return 0;
 }
 int* get_options(int argc, char** argv){
     int* option_values = malloc(sizeof(int)*2);

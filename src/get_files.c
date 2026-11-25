@@ -8,6 +8,9 @@
 
 int get_num_of_files(char* dirname,int dot){
     DIR* dir = safe_opendir(dirname);
+    if (dir == NULL){
+        return -1;
+    }
     int len = 0;
     struct dirent* file = readdir(dir);
     while(file != NULL){

@@ -50,8 +50,8 @@ int my_strcmp(char* string1, char* string2){
 DIR* safe_opendir(char* dirname){
     DIR* dir = opendir(dirname);
     if (dir == NULL) {
-        printf("Cannot open directory '%s'\n", dirname);
-        exit(1);
+        printf("my_ls: %s: No such file or directory\n", dirname);
+        return NULL;
     }
     return dir;
 }
